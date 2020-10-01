@@ -1,0 +1,14 @@
+#!/bin/sh
+cd ${0%/*} || exit 1    # run from this directory
+set -x
+
+cd subModels/surfaceFilmModelsSWIM
+wclean
+cd ../../subModels/particlesLib
+wclean
+cd ../../iceFoam
+wclean
+cd iceDyMFoam
+wclean
+
+# ----------------------------------------------------------------- end-of-file

@@ -1,0 +1,13 @@
+#!/bin/sh
+cd ${0%/*} || exit 1    # run from this directory
+set -x
+
+cd subModels/surfaceFilmModelsSWIM
+wmake
+cd ../../subModels/particlesLib
+wmake
+cd ../../TESTiceFoam
+wmake
+cd TESTiceDyMFoam
+wmake
+# ----------------------------------------------------------------- end-of-file
