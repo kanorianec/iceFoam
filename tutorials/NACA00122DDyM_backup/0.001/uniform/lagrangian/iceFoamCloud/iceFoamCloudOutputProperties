@@ -1,0 +1,54 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v1912                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "0.001/uniform/lagrangian/iceFoamCloud";
+    object      iceFoamCloudOutputProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+injectionModel
+{
+    model1
+    {
+        volumeTotal     5.502840000000009;
+        massInjected    5.664285714285704e-05;
+        nInjections     26;
+        parcelsAddedTotal 136;
+        timeStep0       0.001;
+    }
+}
+
+surfaceFilmModel
+{
+    thermoSurfaceFilm
+    {
+        nParcelsTransferred 0;
+        nParcelsInjected 0;
+        nParcelsSplashed 0;
+    }
+}
+
+patchInteractionModel
+{
+    escapedParcels  0;
+    escapedMass     0;
+    standardWallInteraction
+    {
+        nEscape         5 ( 1 ( 0 ) 1 ( 0 ) 1 ( 0 ) 1 ( 0 ) 1 ( 0 ) );
+        massEscape      5 ( 1 ( 0 ) 1 ( 0 ) 1 ( 0 ) 1 ( 0 ) 1 ( 0 ) );
+        nStick          5 ( 1 ( 0 ) 1 ( 0 ) 1 ( 0 ) 1 ( 0 ) 1 ( 0 ) );
+        massStick       5 ( 1 ( 0 ) 1 ( 0 ) 1 ( 0 ) 1 ( 0 ) 1 ( 0 ) );
+    }
+}
+
+
+// ************************************************************************* //

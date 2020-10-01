@@ -7,4 +7,5 @@ cleanTimeDirectories
 rm -rf postProcessing
 rm -f log.*
 rm -r proc*
+rm -f caseConditions
 #------------------------------------------------------------------------------

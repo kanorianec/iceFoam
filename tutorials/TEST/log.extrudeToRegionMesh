@@ -1,0 +1,81 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v1912                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _f3950763fe-20191219 OPENFOAM=1912
+Arch   : "LSB;label=32;scalar=64"
+Exec   : extrudeToRegionMesh -overwrite
+Date   : Oct 01 2020
+Time   : 22:33:31
+Host   : aleksandr-Aspire-V3-571G
+PID    : 28305
+I/O    : uncollated
+Case   : /home/aleksandr/ISP/ICING/iceFoam/tutorials/TEST
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+Selecting extrudeModel linearNormal
+Selected extrudeModel for linearNormal using coeffs 
+{
+    thickness       0.01;
+}
+
+Extruding zones 1(wallFilmFaces) on mesh region0 into shell mesh wallFilmRegion
+Writing meshes to constant
+
+Zone wallFilmFaces has boundary faces
+extrudePatch : faces:40 points:82 edges:121
+
+Adding coupling patches:
+
+patchID	patch	type
+-------	-----	----
+3	wallFilmFaces_top	patch
+4	region0_to_wallFilmRegion_wallFilmFaces	mappedWall
+Added 2 inter-region patches.
+
+Adding coupling patches:
+
+patchID	patch	type
+-------	-----	----
+3	wallFilmFaces_top	patch
+4	region0_to_wallFilmRegion_wallFilmFaces	mappedWall
+Added 2 inter-region patches.
+
+Adding patches for sides on zones:
+
+patchID	patch
+-------	-----
+Added 0 zone-side patches.
+
+Adding inter-zone patches:
+
+patchID	patch
+-------	-----
+Added 0 inter-zone patches.
+
+Adding processor or cyclic patches:
+
+patchID	patch
+-------	-----
+Added 0 coupled patches.
+
+Deleting patch 0 name:filmWalls
+Writing mesh wallFilmRegion to "constant"
+
+Deleting patch 0 name:filmWalls
+Deleting patch 3 name:wallFilmFaces_top
+Writing mesh region0 to "constant"
+
+End
+

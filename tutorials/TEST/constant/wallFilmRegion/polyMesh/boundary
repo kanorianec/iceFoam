@@ -1,0 +1,97 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v1912                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       polyBoundaryMesh;
+    location    "constant/wallFilmRegion/polyMesh";
+    object      boundary;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+4
+(
+    sides
+    {
+        type            patch;
+        nFaces          2;
+        startFace       39;
+    }
+    frontAndBack
+    {
+        type            empty;
+        inGroups        1(empty);
+        nFaces          80;
+        startFace       41;
+    }
+    wallFilmFaces_top
+    {
+        type            patch;
+        nFaces          40;
+        startFace       121;
+    }
+    region0_to_wallFilmRegion_wallFilmFaces
+    {
+        type            mappedWall;
+        inGroups        1(wall);
+        nFaces          40;
+        startFace       161;
+        sampleMode      nearestPatchFace;
+        sampleRegion    region0;
+        samplePatch     region0_to_wallFilmRegion_wallFilmFaces;
+        offsetMode      nonuniform;
+        offsets         nonuniform List<vector> 
+40
+(
+(-5.551115123e-17 0 0)
+(-2.775557562e-17 0 0)
+(-8.326672685e-17 1.734723476e-18 0)
+(-2.775557562e-17 0 0)
+(-2.775557562e-17 0 0)
+(0 8.67361738e-19 0)
+(0 0 0)
+(-1.387778781e-17 0 0)
+(0 8.67361738e-19 0)
+(-2.775557562e-17 0 0)
+(-1.387778781e-17 0 0)
+(0 0 0)
+(0 0 0)
+(0 0 0)
+(0 8.67361738e-19 0)
+(-6.938893904e-18 1.734723476e-18 0)
+(0 8.67361738e-19 0)
+(-3.469446952e-18 1.734723476e-18 0)
+(1.734723476e-18 -8.67361738e-19 0)
+(-8.67361738e-19 -8.67361738e-19 0)
+(-8.67361738e-19 -8.67361738e-19 0)
+(-1.734723476e-18 -8.67361738e-19 0)
+(0 8.67361738e-19 0)
+(6.938893904e-18 1.734723476e-18 0)
+(6.938893904e-18 1.734723476e-18 0)
+(0 0 0)
+(0 0 0)
+(0 8.67361738e-19 0)
+(1.387778781e-17 0 0)
+(0 0 0)
+(0 0 0)
+(-2.775557562e-17 0 0)
+(1.387778781e-17 0 0)
+(0 0 0)
+(2.775557562e-17 1.734723476e-18 0)
+(2.775557562e-17 0 0)
+(-2.775557562e-17 0 0)
+(2.775557562e-17 1.734723476e-18 0)
+(0 0 0)
+(5.551115123e-17 0 0)
+)
+;
+    }
+)
+
+// ************************************************************************* //

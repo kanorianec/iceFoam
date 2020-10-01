@@ -1,0 +1,31 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v1912                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "0.002/uniform/regionModels/wallFilmRegion";
+    object      wallFilmRegionOutputProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+addedMassTotal  0;
+
+injectionModelList
+{
+    massInjected    1 ( 0 );
+}
+
+transferModelList
+{
+    massTransferred 1 ( 0 );
+}
+
+
+// ************************************************************************* //

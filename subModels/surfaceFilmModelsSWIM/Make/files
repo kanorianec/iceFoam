@@ -1,5 +1,6 @@
 /* Surface film models */
-SWIMIILayer/SWIMIILayer.C
+/* SWIMIILayer/SWIMIILayer.C */
 iceSingleLayer/iceSingleLayer.C
+Myers/Myers.C
 
 LIB = $(FOAM_USER_LIBBIN)/libsurfaceFilmModelsSWIM
